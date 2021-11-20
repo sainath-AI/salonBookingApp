@@ -6,13 +6,12 @@
     android:layout_height="match_parent"
     android:background="@color/app_blue"
     android:orientation="vertical"
-    tools:context=".SaloonDetailsActivity">
+    tools:context=".view.activity.SaloonDetailsActivity">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:background="w"
         android:drawableLeft="@drawable/back_icon"
         android:drawablePadding="20dp"
         android:drawableTint="#E91E63"
@@ -143,4 +142,5 @@
         app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
         app:spanCount="2"
         tools:listitem="@layout/service_layout" />
+
 </LinearLayout>

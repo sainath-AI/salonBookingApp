@@ -1,4 +1,4 @@
-package com.masai.sainath.salonbookingapp
+package com.masai.sainath.salonbookingapp.view.activity
 
 import android.annotation.SuppressLint
 import android.content.Intent
@@ -8,6 +8,7 @@ import android.os.Handler
 import android.os.Looper
 import android.view.Window
 import android.view.WindowManager
+import com.masai.sainath.salonbookingapp.R
 
 @SuppressLint("CustomSplashScreen")
 class SplashScreen : AppCompatActivity() {

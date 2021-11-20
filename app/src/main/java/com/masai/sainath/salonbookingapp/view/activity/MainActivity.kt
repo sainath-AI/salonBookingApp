@@ -1,4 +1,4 @@
-package com.masai.sainath.salonbookingapp
+package com.masai.sainath.salonbookingapp.view.activity
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity

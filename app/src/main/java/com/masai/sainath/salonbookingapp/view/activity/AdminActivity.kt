@@ -1,11 +1,11 @@
-package com.masai.sainath.salonbookingapp
+package com.masai.sainath.salonbookingapp.view.activity
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
-import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.firebase.firestore.FirebaseFirestore
+import com.masai.sainath.salonbookingapp.model.AdminModel
 import com.masai.sainath.salonbookingapp.databinding.ActivityAdminBinding
 
 class AdminActivity : AppCompatActivity() {
@@ -18,7 +18,7 @@ class AdminActivity : AppCompatActivity() {
         binding= ActivityAdminBinding.inflate(layoutInflater)
         setContentView(binding.root)
         binding.viewSalons.setOnClickListener {
-            startActivity(Intent(this,ListOfSalons::class.java))
+            startActivity(Intent(this, ListOfSalons::class.java))
             finish()
         }
 

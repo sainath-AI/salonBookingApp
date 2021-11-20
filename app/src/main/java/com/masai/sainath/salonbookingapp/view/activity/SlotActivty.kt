@@ -1,9 +1,11 @@
-package com.masai.sainath.salonbookingapp
+package com.masai.sainath.salonbookingapp.view.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.GridLayoutManager
 import com.google.firebase.firestore.FirebaseFirestore
+import com.masai.sainath.salonbookingapp.view.adapter.SlotAdapter
+import com.masai.sainath.salonbookingapp.model.SlotModel
 import com.masai.sainath.salonbookingapp.databinding.ActivitySlotActivtyBinding
 
 class SlotActivty : AppCompatActivity() {

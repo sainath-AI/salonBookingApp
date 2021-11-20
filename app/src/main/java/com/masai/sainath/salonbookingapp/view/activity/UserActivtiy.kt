@@ -1,4 +1,4 @@
-package com.masai.sainath.salonbookingapp
+package com.masai.sainath.salonbookingapp.view.activity
 
 import android.content.ActivityNotFoundException
 import android.content.Intent
@@ -9,10 +9,14 @@ import android.view.Gravity
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.firebase.firestore.FirebaseFirestore
+import com.masai.sainath.salonbookingapp.model.AdminModel
+import com.masai.sainath.salonbookingapp.R
+import com.masai.sainath.salonbookingapp.view.adapter.UserAdapter1
 import com.masai.sainath.salonbookingapp.databinding.ActivityUserActivtiyBinding
+import com.masai.sainath.salonbookingapp.view.interfaces.OnItemClickListener
 import java.lang.Exception
 
-class UserActivtiy : AppCompatActivity() ,OnItemClickListener{
+class UserActivtiy : AppCompatActivity() , OnItemClickListener {
 
     lateinit var binding: ActivityUserActivtiyBinding
     lateinit var database: FirebaseFirestore
@@ -39,7 +43,7 @@ class UserActivtiy : AppCompatActivity() ,OnItemClickListener{
         binding.navigationView.setNavigationItemSelectedListener {
 
             when(it.itemId){
-                R.id.share->{
+                R.id.share ->{
                     try {
                         val shareIntent = Intent(Intent.ACTION_SEND)
                         shareIntent.type = "text/plain"
@@ -58,7 +62,7 @@ class UserActivtiy : AppCompatActivity() ,OnItemClickListener{
                     }
                     true
                 }
-                R.id.more->{
+                R.id.more ->{
                     try {
                         startActivity(Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=$packageName")))
                     } catch (e: ActivityNotFoundException) {
@@ -66,7 +70,7 @@ class UserActivtiy : AppCompatActivity() ,OnItemClickListener{
                     }
                     true
                 }
-                R.id.rate->{
+                R.id.rate ->{
                     val uri = Uri.parse("market://details?id=$packageName")
                     val myAppLinkToMarket = Intent(Intent.ACTION_VIEW, uri)
                     try {

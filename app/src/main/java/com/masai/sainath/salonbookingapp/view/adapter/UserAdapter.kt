@@ -1,4 +1,4 @@
-package com.masai.sainath.salonbookingapp
+package com.masai.sainath.salonbookingapp.view.adapter
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -8,6 +8,8 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.masai.sainath.salonbookingapp.model.AdminModel
+import com.masai.sainath.salonbookingapp.R
 
 class UserAdapter(private val requireContext: Context, private val listBestofTheMoth : ArrayList<AdminModel>) :
     RecyclerView.Adapter<UserAdapter.BomViewHolder>() {

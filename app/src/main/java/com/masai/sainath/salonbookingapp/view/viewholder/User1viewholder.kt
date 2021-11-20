@@ -1,4 +1,4 @@
-package com.masai.sainath.salonbookingapp
+package com.masai.sainath.salonbookingapp.view.viewholder
 
 import android.view.View
 import android.widget.Button
@@ -6,6 +6,9 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.masai.sainath.salonbookingapp.model.AdminModel
+import com.masai.sainath.salonbookingapp.view.interfaces.OnItemClickListener
+import com.masai.sainath.salonbookingapp.R
 
 import com.ramotion.foldingcell.FoldingCell
 
