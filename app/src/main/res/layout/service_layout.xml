@@ -57,10 +57,10 @@
             android:layout_height="wrap_content"
             android:layout_weight="0.5"
             android:gravity="center"
+            android:textStyle="bold"
             android:backgroundTint="#E91E63"
             android:text="Add"
             android:textAllCaps="false" />
     </LinearLayout>
-
 
 </androidx.cardview.widget.CardView>

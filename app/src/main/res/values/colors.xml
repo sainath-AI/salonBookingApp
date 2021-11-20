@@ -13,7 +13,6 @@
     <color name="browser_actions_title_color">#646464</color>
     <dimen name="browser_actions_context_menu_max_width">500dp</dimen>
     <dimen name="browser_actions_context_menu_min_padding">20dp</dimen>
-
     <color name="app_blue">#0B1124</color>
     <color name="google_pink">#FFEEEE</color>
     <color name="facebook_blue">#ECF2FF</color>
