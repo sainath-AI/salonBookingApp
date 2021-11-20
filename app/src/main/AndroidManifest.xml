@@ -10,6 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SalonBookingApp">
         <activity
+            android:name=".ListOfSalons"
+            android:exported="false" />
+        <activity
+            android:name=".PaymentDetails"
+            android:exported="false" />
+        <activity
+            android:name=".SlotActivty"
+            android:exported="false" />
+        <activity
             android:name=".SaloonDetailsActivity"
             android:exported="true" />
         <activity

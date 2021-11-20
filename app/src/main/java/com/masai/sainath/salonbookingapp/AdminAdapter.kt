@@ -3,6 +3,7 @@ package com.masai.sainath.salonbookingapp
 import android.app.AlertDialog
 import android.content.Context
 import android.content.DialogInterface
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -37,6 +38,7 @@ class AdminAdapter(
 
     override fun onBindViewHolder(holder: BomViewHolder, position: Int) {
         holder.salonname.text = listBestofTheMoth[position].salonname
+
 
         Glide.with(requireContext).load(listBestofTheMoth[position].imgurl).into(holder.imageview)
         holder.btndelete.setOnClickListener {

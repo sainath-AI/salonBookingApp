@@ -7,6 +7,32 @@
     android:layout_height="match_parent"
     tools:context=".AdminActivity">
 
+    <LinearLayout
+        android:id="@+id/linearlayout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/app_blue"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="20dp"
+            android:fontFamily="@font/roboto"
+            android:text="Register The Salons "
+            android:textColor="@color/white"
+            android:textSize="20sp"
+
+            />
+
+
+    </LinearLayout>
+
+
     <EditText
         android:id="@+id/etImgUrl"
         android:layout_width="match_parent"
@@ -51,24 +77,36 @@
         android:layout_gravity="end"
         android:text="Add to list"
         android:layout_margin="10dp"
-        android:backgroundTint="#9360f9"
+        android:backgroundTint="@color/app_blue"
         />
-
-    <TextView
-        android:layout_width="match_parent"
+    <Button
+        android:id="@+id/viewSalons"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="List Of Admins"
-        android:textSize="22sp"
-        android:layout_margin="10dp"
-        android:textColor="@color/black"
+        android:gravity="bottom"
+        android:paddingStart="@dimen/_20sdp"
+        android:paddingEnd="@dimen/_20sdp"
+        android:backgroundTint="@color/app_blue"
+        android:text="View the Salons here"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/_180sdp"
+        />
 
-        />
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/revBom"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
-        />
+<!--    <TextView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="List Of Admins"-->
+<!--        android:textSize="22sp"-->
+<!--        android:layout_margin="10dp"-->
+<!--        android:textColor="@color/black"-->
+
+<!--        />-->
+<!--    <androidx.recyclerview.widget.RecyclerView-->
+<!--        android:id="@+id/revBom"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:layout_marginStart="10dp"-->
+<!--        android:layout_marginEnd="10dp"-->
+<!--        />-->
 
 </LinearLayout>
