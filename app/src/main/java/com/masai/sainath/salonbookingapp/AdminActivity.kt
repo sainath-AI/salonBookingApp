@@ -1,5 +1,6 @@
 package com.masai.sainath.salonbookingapp
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -16,17 +17,12 @@ class AdminActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding= ActivityAdminBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
-        database= FirebaseFirestore.getInstance()
-
-        database.collection("Admindata").addSnapshotListener { value, error ->
-            val listOfCategories = arrayListOf<AdminModel>()
-            val data = value?.toObjects(AdminModel::class.java)
-            listOfCategories.addAll(data!!)
-            binding.revBom.layoutManager = LinearLayoutManager(this)
-            binding.revBom.adapter = AdminAdapter(this, listOfCategories)
-
+        binding.viewSalons.setOnClickListener {
+            startActivity(Intent(this,ListOfSalons::class.java))
+            finish()
         }
+
+
         binding.btnAdd.setOnClickListener {
             if (binding.etSalonName.text.toString().isEmpty()
                 && binding.etBarberName.text.toString().isEmpty()&&

@@ -23,6 +23,8 @@ class UserActivtiy : AppCompatActivity() ,OnItemClickListener{
         setContentView(binding.root)
 
 
+
+
         database= FirebaseFirestore.getInstance()
 
 
@@ -94,11 +96,13 @@ class UserActivtiy : AppCompatActivity() ,OnItemClickListener{
     }
 
     override fun onItemClicked(mallItem: AdminModel) {
-        TODO("Not yet implemented")
+        startActivity(Intent(this, SlotActivty::class.java))
+
     }
 
     override fun onDirectionsClicked() {
-        val gmmIntentUri = Uri.parse("geo:0,0?q=" + Uri.encode("Whatsapp Salon,Bengalore"))
+    //    val location=intent.getStringExtra("location")
+        val gmmIntentUri = Uri.parse("geo:0,0?q=" + Uri.encode("barber shops bengalore"))
 
         val mapIntent = Intent(Intent.ACTION_VIEW, gmmIntentUri)
         mapIntent.setPackage("com.google.android.apps.maps")
