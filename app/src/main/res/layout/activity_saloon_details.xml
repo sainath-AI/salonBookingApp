@@ -12,6 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
+        android:background="w"
         android:drawableLeft="@drawable/back_icon"
         android:drawablePadding="20dp"
         android:drawableTint="#E91E63"
@@ -24,19 +25,20 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp">
+        android:layout_margin="10dp"
+        app:cardCornerRadius="20dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <com.makeramen.roundedimageview.RoundedImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+            <ImageView xmlns:app="http://schemas.android.com/apk/res-auto"
                 android:id="@+id/imageView1"
                 android:layout_width="match_parent"
-                android:layout_height="150dp"
+                android:layout_height="200dp"
                 android:scaleType="fitXY"
-                android:src="@drawable/ic_launcher_foreground"
+                android:src="@drawable/barber"
                 app:riv_border_color="#FFFFFF"
                 app:riv_border_width="2dip"
                 app:riv_corner_radius="30dip"
@@ -122,13 +124,13 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
         android:layout_marginVertical="10dp"
         android:background="@drawable/title_bg"
         android:fontFamily="@font/roboto"
         android:paddingHorizontal="100dp"
         android:paddingVertical="5dp"
         android:text="All Services"
-        android:layout_gravity="center_horizontal"
         android:textColor="#FFFFFF"
         android:textSize="20dp" />
 
@@ -137,9 +139,8 @@
         android:id="@+id/serviceRecyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@drawable/recyclerview_bg"
         app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
         app:spanCount="2"
-        android:background="@drawable/recyclerview_bg"
         tools:listitem="@layout/service_layout" />
-
 </LinearLayout>
