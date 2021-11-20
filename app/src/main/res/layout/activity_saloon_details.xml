@@ -14,88 +14,130 @@
         android:drawableLeft="@drawable/back_icon"
         android:drawablePadding="20dp"
         android:drawableTint="#8A0C9F"
+        android:fontFamily="@font/roboto"
         android:gravity="center_vertical"
         android:text="Back"
         android:textColor="#8A0C9F"
-        android:textSize="20dp"
-        android:textStyle="bold" />
+        android:textSize="25dp" />
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp">
 
-        <com.makeramen.roundedimageview.RoundedImageView xmlns:app="http://schemas.android.com/apk/res-auto"
-            android:id="@+id/imageView1"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="150dp"
-            android:scaleType="fitXY"
-            android:src="@drawable/ic_launcher_foreground"
-            app:riv_border_color="#FFFFFF"
-            app:riv_border_width="2dip"
-            app:riv_corner_radius="30dip"
-            app:riv_mutate_background="true"
-            app:riv_oval="false" />
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.makeramen.roundedimageview.RoundedImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/imageView1"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_launcher_foreground"
+                app:riv_border_color="#FFFFFF"
+                app:riv_border_width="2dip"
+                app:riv_corner_radius="30dip"
+                app:riv_mutate_background="true"
+                app:riv_oval="false" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="15dp"
+                android:fontFamily="@font/roboto"
+                android:text="Saloon Name"
+                android:textColor="#000000"
+                android:textSize="20dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:fontFamily="@font/roboto"
+                android:text="Hasanganj safiyabad munger"
+                android:textColor="#000000"
+                android:textSize="15dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="horizontal"
+                android:weightSum="4">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:drawableTop="@drawable/star_icon"
+                    android:fontFamily="@font/roboto"
+                    android:text="Amenities"
+                    android:textAlignment="center"
+                    android:textColor="#8A0C9F" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:drawableTop="@drawable/call_icon"
+                    android:fontFamily="@font/roboto"
+                    android:text="Call"
+                    android:textAlignment="center"
+                    android:textColor="#8A0C9F" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:drawableTop="@drawable/location_icon"
+                    android:fontFamily="@font/roboto"
+                    android:text="Direction"
+                    android:textAlignment="center"
+                    android:textColor="#8A0C9F" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:drawableTop="@drawable/share_icon"
+                    android:fontFamily="@font/roboto"
+                    android:text="Share"
+                    android:textAlignment="center"
+                    android:textColor="#8A0C9F" />
+
+            </LinearLayout>
+
+        </LinearLayout>
 
     </androidx.cardview.widget.CardView>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="15dp"
-        android:text="Saloon Name"
-        android:textColor="#000000"
+        android:layout_marginVertical="5dp"
+        android:background="@drawable/bg1"
+        android:fontFamily="@font/roboto"
+        android:paddingVertical="5dp"
+        android:paddingLeft="20dp"
+        android:text="All Services"
+        android:paddingRight="200dp"
+        android:textColor="#FFFFFF"
         android:textSize="20dp" />
 
-    <LinearLayout
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/serviceRecyclerView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:orientation="horizontal"
-        android:weightSum="4">
-
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_weight="1"
-            android:drawableTop="@drawable/star_icon"
-            android:text="Amenities"
-            android:textAlignment="center"
-            android:textColor="#8A0C9F" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_weight="1"
-            android:drawableTop="@drawable/call_icon"
-            android:text="Call"
-            android:textAlignment="center"
-            android:textColor="#8A0C9F" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_weight="1"
-            android:drawableTop="@drawable/location_icon"
-            android:text="Direction"
-            android:textAlignment="center"
-            android:textColor="#8A0C9F" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_weight="1"
-            android:drawableTop="@drawable/share_icon"
-            android:text="Share"
-            android:textAlignment="center"
-            android:textColor="#8A0C9F" />
-
-    </LinearLayout>
-
+        android:layout_height="match_parent"
+        android:background="@drawable/recyclerview_bg"
+        tools:listitem="@layout/service_layout" />
 
 </LinearLayout>

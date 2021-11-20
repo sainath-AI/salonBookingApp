@@ -3,27 +3,14 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Prabhakar/Full Stack Android Development/Assignments/Week 30/Day-05/SaloonBookingApp/app/src/main/res/layout/activity_splash_screen.xml" value="0.259375" />
-        <entry key="..\:/Prabhakar/Full Stack Android Development/Assignments/Week 30/Day-05/new/app/src/main/res/font/roboto.xml" value="0.2111111111111111" />
-        <entry key="..\:/Prabhakar/Full Stack Android Development/Assignments/Week 30/Day-05/new/app/src/main/res/layout/activity_admin.xml" value="0.12613981762917933" />
-        <entry key="..\:/Prabhakar/Full Stack Android Development/Assignments/Week 30/Day-05/new/app/src/main/res/layout/activity_main.xml" value="0.12613981762917933" />
-        <entry key="..\:/Prabhakar/Full Stack Android Development/Assignments/Week 30/Day-05/new/app/src/main/res/layout/activity_saloon_details.xml" value="0.259375" />
-        <entry key="..\:/Prabhakar/Full Stack Android Development/Assignments/Week 30/Day-05/new/app/src/main/res/layout/activity_splash_screen.xml" value="0.259375" />
-        <entry key="..\:/Prabhakar/Full Stack Android Development/Assignments/Week 30/Day-05/new/app/src/main/res/layout/activity_user_activtiy.xml" value="0.259375" />
-        <entry key="..\:/Prabhakar/Full Stack Android Development/Assignments/Week 30/Day-05/new/app/src/main/res/layout/item_admindetails.xml" value="0.259375" />
-        <entry key="..\:/Prabhakar/Full Stack Android Development/Assignments/Week 30/Day-05/new/app/src/main/res/layout/item_users.xml" value="0.12613981762917933" />
-        <entry key="..\:/Users/Sai Nath Reddy/OneDrive/Desktop/salonBookingApp/app/src/main/res/drawable-v24/book_bg.xml" value="0.12916666666666668" />
-        <entry key="..\:/Users/Sai Nath Reddy/OneDrive/Desktop/salonBookingApp/app/src/main/res/font/roboto.xml" value="0.24351851851851852" />
-        <entry key="..\:/Users/Sai Nath Reddy/OneDrive/Desktop/salonBookingApp/app/src/main/res/layout/activity_admin.xml" value="0.1793478260869565" />
-        <entry key="..\:/Users/Sai Nath Reddy/OneDrive/Desktop/salonBookingApp/app/src/main/res/layout/item_users1.xml" value="0.1793478260869565" />
-        <entry key="..\:/Users/Sai Nath Reddy/OneDrive/Desktop/salonBookingApp/app/src/main/res/layout/mall_item_layout.xml" value="0.1793478260869565" />
+        <entry key="..\:/Prabhakar/Full Stack Android Development/Assignments/Week 30/Day-05/SaloonBookingApp/app/src/main/res/drawable/bg1.xml" value="0.24814814814814815" />
+        <entry key="..\:/Prabhakar/Full Stack Android Development/Assignments/Week 30/Day-05/SaloonBookingApp/app/src/main/res/drawable/recyclerview_bg.xml" value="0.9571428571428572" />
+        <entry key="..\:/Prabhakar/Full Stack Android Development/Assignments/Week 30/Day-05/SaloonBookingApp/app/src/main/res/drawable/rupee_icon.xml" value="0.24814814814814815" />
+        <entry key="..\:/Prabhakar/Full Stack Android Development/Assignments/Week 30/Day-05/SaloonBookingApp/app/src/main/res/layout/activity_admin.xml" value="0.22780797101449277" />
+        <entry key="..\:/Prabhakar/Full Stack Android Development/Assignments/Week 30/Day-05/SaloonBookingApp/app/src/main/res/layout/activity_saloon_details.xml" value="0.264" />
+        <entry key="..\:/Prabhakar/Full Stack Android Development/Assignments/Week 30/Day-05/SaloonBookingApp/app/src/main/res/layout/service_layout.xml" value="0.42366412213740456" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="1.8" project-jdk-type="JavaSDK">
-    <output url="file://$PROJECT_DIR$/build/classes" />
-  </component>
-  <component name="ProjectType">
-    <option name="id" value="Android" />
-  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="11" project-jdk-type="JavaSDK" />
 </project>
