@@ -9,7 +9,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 
-class UserAdapter(val requireContext: Context, val listBestofTheMoth : ArrayList<AdminModel>) :
+class UserAdapter(private val requireContext: Context, private val listBestofTheMoth : ArrayList<AdminModel>) :
     RecyclerView.Adapter<UserAdapter.BomViewHolder>() {
 
 

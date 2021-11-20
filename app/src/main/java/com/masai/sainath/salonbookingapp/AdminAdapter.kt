@@ -13,15 +13,18 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.google.firebase.firestore.FirebaseFirestore
 
-class AdminAdapter(val requireContext: Context, val listBestofTheMoth: ArrayList<AdminModel>) :
+class AdminAdapter(
+    private val requireContext: Context,
+    private val listBestofTheMoth: ArrayList<AdminModel>
+) :
     RecyclerView.Adapter<AdminAdapter.BomViewHolder>() {
 
-    val db = FirebaseFirestore.getInstance()
+    private val db = FirebaseFirestore.getInstance()
 
     inner class BomViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
         val imageview = itemView.findViewById<ImageView>(R.id.SalonImg)
-        val salonname=itemView.findViewById<TextView>(R.id.SalonName)
+        val salonname = itemView.findViewById<TextView>(R.id.SalonName)
         val btndelete = itemView.findViewById<ImageView>(R.id.btnDeletetct)
     }
 
@@ -33,7 +36,7 @@ class AdminAdapter(val requireContext: Context, val listBestofTheMoth: ArrayList
     }
 
     override fun onBindViewHolder(holder: BomViewHolder, position: Int) {
-        holder.salonname.text=listBestofTheMoth[position].salonname
+        holder.salonname.text = listBestofTheMoth[position].salonname
 
         Glide.with(requireContext).load(listBestofTheMoth[position].imgurl).into(holder.imageview)
         holder.btndelete.setOnClickListener {
