@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "652497257351",
+    "project_id": "salonbookingapp-ca454",
+    "storage_bucket": "salonbookingapp-ca454.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:652497257351:android:92642307d6a1ca4d5ec922",
+        "android_client_info": {
+          "package_name": "com.masai.sainath.salonbookingapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "652497257351-a5b2j1duf6liv4u47v0acu4drumd8pie.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDXRlHcD_QUWCadjhI0660KsKeRvI6PX00"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "652497257351-a5b2j1duf6liv4u47v0acu4drumd8pie.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
