@@ -10,6 +10,7 @@ import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.firebase.firestore.FirebaseFirestore
 import com.masai.sainath.salonbookingapp.databinding.ActivityUserActivtiyBinding
+import io.grpc.InternalChannelz.id
 import java.lang.Exception
 
 class UserActivtiy : AppCompatActivity() ,OnItemClickListener{
@@ -96,7 +97,12 @@ class UserActivtiy : AppCompatActivity() ,OnItemClickListener{
     }
 
     override fun onItemClicked(mallItem: AdminModel) {
-        startActivity(Intent(this, SlotActivty::class.java))
+        val intent=Intent(this,SlotActivty::class.java)
+        intent.putExtra("imgurl",mallItem.imgurl)
+        intent.putExtra("salonname",mallItem.salonname)
+        intent.putExtra("barbername",mallItem.barbarname)
+        intent.putExtra("location",mallItem.location)
+        startActivity(intent)
 
     }
 

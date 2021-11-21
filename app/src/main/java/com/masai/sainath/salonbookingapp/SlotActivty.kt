@@ -17,6 +17,12 @@ class SlotActivty : AppCompatActivity() {
 
         database= FirebaseFirestore.getInstance()
 
+        val imgurl=intent.getStringExtra("imgurl")
+        val salonname=intent.getStringExtra("salonname")
+        val barbername=intent.getStringExtra("barbername")
+        val location=intent.getStringExtra("location")
+
+
         database.collection("slots").addSnapshotListener { value, error ->
             val  listBestofTheMoth = arrayListOf<SlotModel>()
 

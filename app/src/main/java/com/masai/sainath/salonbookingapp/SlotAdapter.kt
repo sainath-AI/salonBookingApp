@@ -26,6 +26,7 @@ class SlotAdapter(val requireContext: Context, val listBestofTheMoth: ArrayList<
 
     val db = FirebaseFirestore.getInstance()
 
+
     inner class BomViewHolder(val binding:ItemCategoryBinding) : RecyclerView.ViewHolder(binding.root) {
 
         val time = itemView.findViewById<TextView>(R.id.slots)
