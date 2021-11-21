@@ -37,8 +37,8 @@ class ServiceViewHolder(val view: View, private val onClickService: ServiceSelec
                     isSelected = true
 
                 }
-                Toast.makeText(context, "Item=$itemCount Price=$totalCoast", Toast.LENGTH_SHORT)
-                    .show()
+//                Toast.makeText(context, "Item=$itemCount Price=$totalCoast", Toast.LENGTH_SHORT)
+//                    .show()
             }
         }
     }

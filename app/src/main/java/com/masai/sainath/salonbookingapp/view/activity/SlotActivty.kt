@@ -41,8 +41,8 @@ class SlotActivty : AppCompatActivity(), OnItemClickListener {
 
     override fun onItemClicked(mallItem: AdminModel) {
         val intent = Intent(this, PaymentDetails::class.java)
-//        intent.putExtra("imgurl", mallItem.imgurl)
-        intent.putExtra("imgurl", intent.getStringExtra("imgurl"))
+        intent.putExtra("imgurl", mallItem.imgurl)
+//        intent.putExtra("imgurl", intent.getStringExtra("imgurl"))
         intent.putExtra("salonname", intent.getStringExtra("salonname"))
         intent.putExtra("barbername", intent.getStringExtra("barbername"))
         intent.putExtra("location", intent.getStringExtra("location"))

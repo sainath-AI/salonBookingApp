@@ -8,7 +8,6 @@ import android.view.View
 import com.bumptech.glide.Glide
 import com.masai.sainath.salonbookingapp.R
 import kotlinx.android.synthetic.main.activity_payment_details.*
-import kotlinx.android.synthetic.main.activity_saloon_details.*
 
 class PaymentDetails : AppCompatActivity() {
 
@@ -18,12 +17,12 @@ class PaymentDetails : AppCompatActivity() {
         setContentView(R.layout.activity_payment_details)
 
 
-        Glide.with(saloonImage).load(intent.getStringExtra("imgurl")).into(saloonImage)
-        saloonName.text = intent.getStringExtra("salonname")
-        barberName.text = intent.getStringExtra("barbername")
-        address.text = intent.getStringExtra("location")
-        tvService.text = intent.getStringExtra("servicename")
-        payPrice.text = "Rs ${intent.getStringExtra("price")}"
+        Glide.with(pay_saloonImg).load(intent.getStringExtra("imgurl")).into(pay_saloonImg)
+//        pay_saloonName.text = intent.getStringExtra("salonname")
+//        barberName.text = intent.getStringExtra("barbername")
+//        address.text = intent.getStringExtra("location")
+//        tvService.text = intent.getStringExtra("servicename")
+//        payPrice.text = "Rs ${intent.getStringExtra("price")}"
         btnPayment.setOnClickListener {
             paymentCard.visibility = View.INVISIBLE
             cartAnimation.visibility = View.VISIBLE
