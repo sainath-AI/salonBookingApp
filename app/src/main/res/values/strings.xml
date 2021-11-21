@@ -1,4 +1,4 @@
 <resources>
     <string name="app_name">SalonBookingApp</string>
-    <string name="clear_payment_here">Payment Online</string>
+    <string name="clear_payment_here">Book Online</string>
 </resources>

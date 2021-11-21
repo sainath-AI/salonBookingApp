@@ -23,7 +23,7 @@
             android:layout_gravity="center_vertical"
             android:layout_marginStart="20dp"
             android:fontFamily="@font/roboto"
-            android:text="Payment Details"
+            android:text="Booking Details"
             android:textColor="@color/white"
             android:textSize="20sp"
 
