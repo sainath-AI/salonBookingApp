@@ -26,7 +26,7 @@ class SaloonDetailsActivity : AppCompatActivity(), ServiceSelector {
             saloonAddress.text = intent.getStringExtra("location")
         }
 
-        book.setOnClickListener {
+        btnBook.setOnClickListener {
             startActivity(Intent(this, SlotActivty::class.java))
         }
         buildList()
