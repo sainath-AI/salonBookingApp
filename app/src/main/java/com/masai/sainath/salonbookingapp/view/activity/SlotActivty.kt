@@ -22,10 +22,7 @@ class SlotActivty : AppCompatActivity(), OnItemClickListener {
 
         database = FirebaseFirestore.getInstance()
 
-        val imgurl = intent.getStringExtra("imgurl")
-        val salonname = intent.getStringExtra("salonname")
-        val barbername = intent.getStringExtra("barbername")
-        val location = intent.getStringExtra("location")
+
 
 
         database.collection("slots").addSnapshotListener { value, error ->
@@ -44,7 +41,13 @@ class SlotActivty : AppCompatActivity(), OnItemClickListener {
 
     override fun onItemClicked(mallItem: AdminModel) {
         val intent = Intent(this, PaymentDetails::class.java)
-        intent.putExtra("imgurl", mallItem.imgurl)
+//        intent.putExtra("imgurl", mallItem.imgurl)
+        intent.putExtra("imgurl", intent.getStringExtra("imgurl"))
+        intent.putExtra("salonname", intent.getStringExtra("salonname"))
+        intent.putExtra("barbername", intent.getStringExtra("barbername"))
+        intent.putExtra("location", intent.getStringExtra("location"))
+        intent.putExtra("servicename", intent.getStringExtra("servicename"))
+        intent.putExtra("price", intent.getStringExtra("price"))
         startActivity(intent)
 
     }

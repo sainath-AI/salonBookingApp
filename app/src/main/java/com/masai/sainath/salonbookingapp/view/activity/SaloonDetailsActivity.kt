@@ -15,7 +15,8 @@ class SaloonDetailsActivity : AppCompatActivity(), ServiceSelector {
 
     private lateinit var serviceAdapter: ServiceAdapter
     private val services = mutableListOf<ServiceModel>()
-
+    private var serviceName = ""
+    private var price = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,7 +28,14 @@ class SaloonDetailsActivity : AppCompatActivity(), ServiceSelector {
         }
 
         btnBook.setOnClickListener {
-            startActivity(Intent(this, SlotActivty::class.java))
+            val gotToSlot = Intent(this, SlotActivty::class.java)
+            gotToSlot.putExtra("imgurl", intent.getStringExtra("imgurl"))
+            gotToSlot.putExtra("salonname", intent.getStringExtra("salonname"))
+            gotToSlot.putExtra("location", intent.getStringExtra("location"))
+            gotToSlot.putExtra("barbername", intent.getStringExtra("barbername"))
+            gotToSlot.putExtra("price", serviceName)
+            gotToSlot.putExtra("servicename", price)
+            startActivity(gotToSlot)
         }
         buildList()
         setRecyclerView()
@@ -115,6 +123,7 @@ class SaloonDetailsActivity : AppCompatActivity(), ServiceSelector {
 
 
     override fun onSelectService(model: ServiceModel, position: Int) {
-
+        serviceName = model.serviceName
+        price=model.servicePrice
     }
 }
