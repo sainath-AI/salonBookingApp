@@ -18,6 +18,14 @@
             android:scaleType="centerCrop"
             android:src="@drawable/mens_hair_cutting" />
 
+        <ImageView
+            android:id="@+id/selected"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            android:visibility="gone"
+            android:src="@drawable/correct" />
+
         <TextView
             android:id="@+id/service_price"
             android:layout_width="wrap_content"
@@ -43,6 +51,5 @@
             android:textColor="#000000"
             android:textSize="15dp" />
     </FrameLayout>
-
 
 </androidx.cardview.widget.CardView>

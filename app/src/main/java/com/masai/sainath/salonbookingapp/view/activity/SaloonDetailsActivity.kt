@@ -2,7 +2,6 @@ package com.masai.sainath.salonbookingapp.view.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Toast
 import androidx.recyclerview.widget.GridLayoutManager
 import com.masai.sainath.salonbookingapp.R
 import com.masai.sainath.salonbookingapp.model.ServiceModel
@@ -15,8 +14,8 @@ class SaloonDetailsActivity : AppCompatActivity(), ServiceSelector {
     private lateinit var serviceAdapter: ServiceAdapter
     private val services = mutableListOf<ServiceModel>()
 
-    override fun onCreate(savedInstanceState: Bundle?) {
 
+    override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_saloon_details)
 
@@ -103,6 +102,7 @@ class SaloonDetailsActivity : AppCompatActivity(), ServiceSelector {
         serviceRecyclerView.layoutManager = GridLayoutManager(this, 2)
         serviceRecyclerView.adapter = serviceAdapter
     }
+
 
     override fun onSelectService(model: ServiceModel, position: Int) {
 
