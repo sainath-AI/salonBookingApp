@@ -1,12 +1,13 @@
 package com.masai.sainath.salonbookingapp
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.GridLayoutManager
 import com.google.firebase.firestore.FirebaseFirestore
 import com.masai.sainath.salonbookingapp.databinding.ActivitySlotActivtyBinding
 
-class SlotActivty : AppCompatActivity() {
+class SlotActivty : AppCompatActivity(),OnItemClickListener {
 
     lateinit var binding: ActivitySlotActivtyBinding
     lateinit var database: FirebaseFirestore
@@ -31,10 +32,22 @@ class SlotActivty : AppCompatActivity() {
 
             binding.revSlot.layoutManager=
                 GridLayoutManager(this    ,3)
-            binding.revSlot.adapter= SlotAdapter(this,listBestofTheMoth)
+            binding.revSlot.adapter= SlotAdapter(this,listBestofTheMoth,this)
 
         }
 
 
     }
+
+    override fun onItemClicked(mallItem: AdminModel) {
+        val intent= Intent(this,PaymentDetails::class.java)
+        intent.putExtra("imgurl",mallItem.imgurl)
+        startActivity(intent)
+
+    }
+
+    override fun onDirectionsClicked() {
+    }
+
+
 }
