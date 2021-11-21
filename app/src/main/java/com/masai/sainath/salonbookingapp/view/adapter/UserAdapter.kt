@@ -19,10 +19,10 @@ class UserAdapter(private val requireContext: Context, private val listBestofThe
     inner class BomViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
         //lateinit var foldingCell: FoldingCell
-        val imageview  = itemView.findViewById<ImageView>(R.id.ImgSalon)
-        val salonname=itemView.findViewById<TextView>(R.id.tvSalon)
-        val barbername=itemView.findViewById<TextView>(R.id.tvName)
-        val location=itemView.findViewById<TextView>(R.id.tvLocation)
+        val imageview  = itemView.findViewById<ImageView>(R.id.pay_saloonImg)
+        val salonname=itemView.findViewById<TextView>(R.id.pay_saloonName)
+        val barbername=itemView.findViewById<TextView>(R.id.barberName)
+        val location=itemView.findViewById<TextView>(R.id.address)
         //val  foldingCell1=itemView.findViewById<FoldingCell>(R.id.folding_cell)
 
     }
