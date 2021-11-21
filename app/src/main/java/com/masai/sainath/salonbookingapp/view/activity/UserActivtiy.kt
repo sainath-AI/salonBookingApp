@@ -1,4 +1,4 @@
-package com.masai.sainath.salonbookingapp
+package com.masai.sainath.salonbookingapp.view.activity
 
 import android.content.ActivityNotFoundException
 import android.content.Intent
@@ -9,38 +9,36 @@ import android.view.Gravity
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.firebase.firestore.FirebaseFirestore
-import com.masai.sainath.salonbookingapp.databinding.ActivityUserActivtiyBinding
-import io.grpc.InternalChannelz.id
+import com.masai.sainath.salonbookingapp.R
+import com.masai.sainath.salonbookingapp.model.AdminModel
+import com.masai.sainath.salonbookingapp.view.adapter.UserAdapter1
+import com.masai.sainath.salonbookingapp.view.interfaces.OnItemClickListener
+import kotlinx.android.synthetic.main.activity_user_activtiy.*
 import java.lang.Exception
 
-class UserActivtiy : AppCompatActivity() ,OnItemClickListener{
+class UserActivtiy : AppCompatActivity(), OnItemClickListener {
 
-    lateinit var binding: ActivityUserActivtiyBinding
+
     lateinit var database: FirebaseFirestore
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding= ActivityUserActivtiyBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+        setContentView(R.layout.activity_user_activtiy)
+
+        database = FirebaseFirestore.getInstance()
 
 
-
-
-        database= FirebaseFirestore.getInstance()
-
-
-        binding.btnmenu.setOnClickListener {
-            if (binding.drawerlayout.isDrawerOpen(Gravity.LEFT)){
-                binding.drawerlayout.closeDrawer(Gravity.LEFT)
-            }else
-            {
-                binding.drawerlayout.openDrawer(Gravity.LEFT)
+        btnmenu.setOnClickListener {
+            if (drawerlayout.isDrawerOpen(Gravity.LEFT)) {
+                drawerlayout.closeDrawer(Gravity.LEFT)
+            } else {
+                drawerlayout.openDrawer(Gravity.LEFT)
             }
         }
-        binding.navigationView.setNavigationItemSelectedListener {
+        navigationView.setNavigationItemSelectedListener {
 
-            when(it.itemId){
-                R.id.share->{
+            when (it.itemId) {
+                R.id.share -> {
                     try {
                         val shareIntent = Intent(Intent.ACTION_SEND)
                         shareIntent.type = "text/plain"
@@ -59,15 +57,25 @@ class UserActivtiy : AppCompatActivity() ,OnItemClickListener{
                     }
                     true
                 }
-                R.id.more->{
+                R.id.more -> {
                     try {
-                        startActivity(Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=$packageName")))
+                        startActivity(
+                            Intent(
+                                Intent.ACTION_VIEW,
+                                Uri.parse("market://details?id=$packageName")
+                            )
+                        )
                     } catch (e: ActivityNotFoundException) {
-                        startActivity(Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=$packageName")))
+                        startActivity(
+                            Intent(
+                                Intent.ACTION_VIEW,
+                                Uri.parse("https://play.google.com/store/apps/details?id=$packageName")
+                            )
+                        )
                     }
                     true
                 }
-                R.id.rate->{
+                R.id.rate -> {
                     val uri = Uri.parse("market://details?id=$packageName")
                     val myAppLinkToMarket = Intent(Intent.ACTION_VIEW, uri)
                     try {
@@ -77,7 +85,7 @@ class UserActivtiy : AppCompatActivity() ,OnItemClickListener{
                     }
                     true
                 }
-                else->{
+                else -> {
                     false
                 }
             }
@@ -88,8 +96,8 @@ class UserActivtiy : AppCompatActivity() ,OnItemClickListener{
             val listOfCategories = arrayListOf<AdminModel>()
             val data = value?.toObjects(AdminModel::class.java)
             listOfCategories.addAll(data!!)
-            binding.revUser.layoutManager = LinearLayoutManager(this)
-            binding.revUser.adapter = UserAdapter1(listOfCategories,this)
+            revUser.layoutManager = LinearLayoutManager(this)
+            revUser.adapter = UserAdapter1(listOfCategories, this)
 
         }
 
@@ -97,31 +105,32 @@ class UserActivtiy : AppCompatActivity() ,OnItemClickListener{
     }
 
     override fun onItemClicked(mallItem: AdminModel) {
-        val intent=Intent(this,SlotActivty::class.java)
-        intent.putExtra("imgurl",mallItem.imgurl)
-        intent.putExtra("salonname",mallItem.salonname)
-        intent.putExtra("barbername",mallItem.barbarname)
-        intent.putExtra("location",mallItem.location)
+        val intent = Intent(this, SaloonDetailsActivity::class.java)
+        intent.putExtra("imgurl", mallItem.imgurl)
+        intent.putExtra("salonname", mallItem.salonname)
+        intent.putExtra("barbername", mallItem.barbarname)
+        intent.putExtra("location", mallItem.location)
         startActivity(intent)
 
     }
 
     override fun onDirectionsClicked() {
-    //    val location=intent.getStringExtra("location")
+        //    val location=intent.getStringExtra("location")
         val gmmIntentUri = Uri.parse("geo:0,0?q=" + Uri.encode("barber shops bengalore"))
 
         val mapIntent = Intent(Intent.ACTION_VIEW, gmmIntentUri)
         mapIntent.setPackage("com.google.android.apps.maps")
         if (this.let {
-                mapIntent.resolveActivity(it.packageManager) } != null) {
+                mapIntent.resolveActivity(it.packageManager)
+            } != null) {
             startActivity(mapIntent)
         }
     }
+
     override fun onBackPressed() {
-        if (binding.drawerlayout.isDrawerOpen(Gravity.LEFT)){
-            binding.drawerlayout.closeDrawer(Gravity.LEFT)
-        }else
-        {
+        if (drawerlayout.isDrawerOpen(Gravity.LEFT)) {
+            drawerlayout.closeDrawer(Gravity.LEFT)
+        } else {
             super.onBackPressed()
 
         }

@@ -1,8 +1,10 @@
 package com.masai.sainath.salonbookingapp.view.activity
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.GridLayoutManager
+import com.bumptech.glide.Glide
 import com.masai.sainath.salonbookingapp.R
 import com.masai.sainath.salonbookingapp.model.ServiceModel
 import com.masai.sainath.salonbookingapp.view.adapter.ServiceAdapter
@@ -18,7 +20,15 @@ class SaloonDetailsActivity : AppCompatActivity(), ServiceSelector {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_saloon_details)
+        if (intent != null) {
+            Glide.with(saloonImage).load(intent.getStringExtra("imgurl")).into(saloonImage)
+            saloonName.text = intent.getStringExtra("salonname")
+            saloonAddress.text = intent.getStringExtra("location")
+        }
 
+        book.setOnClickListener {
+            startActivity(Intent(this, SlotActivty::class.java))
+        }
         buildList()
         setRecyclerView()
     }

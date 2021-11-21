@@ -9,17 +9,32 @@
         android:roundIcon="@drawable/download"
         android:supportsRtl="true"
         android:theme="@style/Theme.SalonBookingApp">
+
         <activity
             android:name=".view.activity.ListOfSalons"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".view.activity.PaymentDetails"
             android:exported="false" />
         <activity
             android:name=".view.activity.SlotActivty"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".view.activity.SaloonDetailsActivity"
+            android:exported="true">
+
+        </activity>
+        <activity
+            android:name=".view.activity.UserActivtiy"
+            android:exported="true" />
+        <activity
+            android:name=".view.activity.AdminActivity"
+            android:exported="true" />
+        <activity
+            android:name=".view.activity.MainActivity"
+            android:exported="true" />
+        <activity
+            android:name=".view.activity.SplashScreen"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -27,20 +42,5 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".view.activity.UserActivtiy"
-            android:exported="false" />
-        <activity
-            android:name=".view.activity.AdminActivity"
-            android:exported="false" />
-        <activity
-            android:name=".view.activity.MainActivity"
-            android:exported="false" />
-        <activity
-            android:name=".view.activity.SplashScreen"
-            android:exported="true">
-
-        </activity>
     </application>
-
 </manifest>
