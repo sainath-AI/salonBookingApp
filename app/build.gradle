@@ -25,9 +25,7 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
-    buildFeatures{
-        viewBinding true
-    }
+   
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
@@ -68,6 +66,9 @@ dependencies {
     implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.23'
 
     implementation 'com.airbnb.android:lottie:4.2.0'
+
+    // Razor pay
+//    implementation 'com.razorpay:checkout:1.6.12'
 
 
 }

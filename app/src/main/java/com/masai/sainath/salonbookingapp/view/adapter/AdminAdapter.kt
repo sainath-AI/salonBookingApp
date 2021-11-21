@@ -1,9 +1,8 @@
-package com.masai.sainath.salonbookingapp
+package com.masai.sainath.salonbookingapp.view.adapter
 
 import android.app.AlertDialog
 import android.content.Context
 import android.content.DialogInterface
-import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -13,6 +12,8 @@ import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.google.firebase.firestore.FirebaseFirestore
+import com.masai.sainath.salonbookingapp.model.AdminModel
+import com.masai.sainath.salonbookingapp.R
 
 class AdminAdapter(
     private val requireContext: Context,

@@ -1,4 +1,4 @@
-package com.masai.sainath.salonbookingapp
+package com.masai.sainath.salonbookingapp.model
 
 data class AdminModel(
     val id:String="",
