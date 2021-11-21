@@ -19,6 +19,7 @@ class UserAdapter1(private val list: List<AdminModel>, private val itemClickList
     override fun onBindViewHolder(holder: User1viewholder, position: Int) {
         val mallItem = list[position]
         holder.setData(mallItem)
+
     }
 
     override fun getItemCount(): Int {

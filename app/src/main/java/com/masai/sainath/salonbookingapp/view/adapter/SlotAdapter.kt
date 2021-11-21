@@ -1,4 +1,4 @@
-package com.masai.sainath.salonbookingapp.view.adapter
+package com.masai.sainath.salonbookingapp
 
 import android.annotation.SuppressLint
 import android.content.Context
@@ -11,24 +11,24 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.firestore.FirebaseFirestore
-import com.masai.sainath.salonbookingapp.R
-import com.masai.sainath.salonbookingapp.model.SlotModel
 import com.masai.sainath.salonbookingapp.databinding.ItemCategoryBinding
-import com.masai.sainath.salonbookingapp.view.activity.PaymentDetails
 
-class SlotAdapter(val requireContext: Context, val listBestofTheMoth: ArrayList<SlotModel>) :
+class SlotAdapter(val requireContext: Context, val listBestofTheMoth: ArrayList<SlotModel>,private val itemClickListener: OnItemClickListener) :
     RecyclerView.Adapter<SlotAdapter.BomViewHolder>() {
 
     val db = FirebaseFirestore.getInstance()
 
-    inner class BomViewHolder(val binding:ItemCategoryBinding) : RecyclerView.ViewHolder(binding.root) {
+
+
+    inner class BomViewHolder(val binding:ItemCategoryBinding,private val itemClickListener: OnItemClickListener) : RecyclerView.ViewHolder(binding.root) {
 
         val time = itemView.findViewById<TextView>(R.id.slots)
+
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BomViewHolder {
         return BomViewHolder(
-            ItemCategoryBinding.inflate(LayoutInflater.from(parent.context),parent,false))
+            ItemCategoryBinding.inflate(LayoutInflater.from(parent.context),parent,false),itemClickListener)
 
     }
 
@@ -36,6 +36,7 @@ class SlotAdapter(val requireContext: Context, val listBestofTheMoth: ArrayList<
     override fun onBindViewHolder(holder: BomViewHolder, position: Int) {
           holder.time.text=listBestofTheMoth[position].time
         holder.itemView.setOnClickListener {
+            itemClickListener.onItemClicked(mallItem = AdminModel(imgurl = "https://i.pinimg.com/736x/df/b9/dc/dfb9dceb23a8c4aa3ade189fe423beae.jpg", salonname = "Retrofitz", barbarname = "Jose Zuniga", location = "Indira Nagar"))
             holder.binding.colorChange.setBackgroundResource(R.drawable.gradient3)
             Handler(Looper.getMainLooper()).postDelayed(Runnable {
                 db.collection("slots").document(listBestofTheMoth[position].id).delete()
@@ -55,8 +56,8 @@ class SlotAdapter(val requireContext: Context, val listBestofTheMoth: ArrayList<
 
                         }
                     }
-           val intent=Intent(requireContext, PaymentDetails::class.java)
-               requireContext.startActivity(intent)
+//           val intent=Intent(requireContext,PaymentDetails::class.java)
+//               requireContext.startActivity(intent)
             },2000)
 
         }
